@@ -26,14 +26,13 @@ Quelques exemples :
 Le projet est un prétexte pour le candidat, de démontrer concrètement ses compétences techniques, ses savoir-faire et savoir être dans le cadre d’une activité de développement informatique.
 Les parties ci-dessous précisent donc les décisions prises sur les spécifications du projet avant sa réalisation technique.
 
-## Spécifications fonctionnelles
+## Analyse fonctionnelle
 
 À défaut de client à interroger pour préciser son besoin, il est décidé ici d'interpréter et d'extrapoller le besoin.
 Le projet sera abordé du point de vue cryptographique qu'est le Javanais à la langue française.
+En raison des contraintes de temps et de l'énoncé, une interface grahique ne sera étudiée et/ou réalisée qu'en cas d'avance.
 
-### Cas d'utilisation
-
-#### Fonction principale 1
+### Fonction principale 1
 
 Le logiciel permet de chiffrer une phrase française en javanais.
 
@@ -45,12 +44,12 @@ Le logiciel permet de chiffrer une phrase française en javanais.
 - av n'est jamais rajouté après la consonne finale d’un mot.
 - S'il est suivi d'une voyelle, le « y » est traité comme une consonne. Le mot « moyen » est codé mavoyaven (pas mavoyen). S'il est lui-même prononcé comme « i », il est traité comme une consonne suivie de la voyelle « i ». Le mot « pays » est codé pavayavis (pas pavays).
 - Les monosyllabes (« a », « à », « en », « un ») ainsi que les mots commençant par une voyelle prennent une syllabe supplémentaire initiale. Ainsi, « abricot » est codé avabravicavot.
-- Le « e » muet n'impose pas la présence de syllabe supplémentaire : « tarte » est codé tavarte. La syllabe supplémentaire peut être ajoutée comme une forme d'insistance. Ainsi, « espèce de tarte » est codé avespavecAVe dave tavarTAVE.
+- Le « e » muet n'impose pas la présence de syllabe supplémentaire : « tarte » est codé tavarte. La syllabe supplémentaire peut être ajoutée comme une forme d'insistance. Ainsi, « espèce de tarte » est codé avespavecAVe dave tavarTAVE. Ici la forme simple sera utilisée.
 * Phrase : Ici "phrase" a plutôt le sens de "message", dont le respect des règles de la grammaire n'a pas d'importance.
 * Français : Les mots contenus dans le message doivent tous être issus de la langue française (se trouver dans un dictionnaire récent).
 * Javanais : Procédé de codage argotique utilisant une phonologie parasitaire constituée par l'insertion d'une syllabe supplémentaire entre voyelles et consonnes.
 
-#### Fonction principale 2
+### Fonction principale 2
 
 Le logiciel permet de déchiffrer un message chiffré en Javanais.
 
@@ -60,13 +59,36 @@ Le logiciel permet de déchiffrer un message chiffré en Javanais.
 * Chiffré : Signifie que le message ne peut être compris par un utilisateur ou un programme ne disposant pas de la clé de déchiffrement
 * Javanais : Voir FP1
 
-#### Fonction contrainte 1
+### Fonction contrainte 1
 
+Le logiciel est utilisable en ligne de commande, au moyen d'une JVM.
 
+### Fonction contrainte 2
+
+Le logiciel est utilisable en tant que dépendance, dans d'autres projets Java.
+
+### Fonction contrainte 3
+
+Le logiciel peut être utilisé pour de la traduction en temps réel.
+En estimant un débit de parole fluide de français de 150 [mots/minutes](https://fr.wikipedia.org/wiki/Mot_par_minute#Lecture), le logiciel est en mesure de chiffrer en temps réel sans prendre de retard sur le locuteur.
+Il en va de même pour le déchiffrement.
+
+### Cas d'utilisation
 
 ## Spécifications techniques
 
+* Le logiciel est compilé avec un jdk 1.7
+* Le logiciel est exécutable avec une jre 1.7
+
 ## Architecture de la solution
+
+## Qualification
+
+### Qualification fonctionnelle
+
+### Tests unitaires
+
+### Tests de charge
 
 ## Outils/méthodes utilisés
 
