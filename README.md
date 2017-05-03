@@ -4,7 +4,7 @@ Cipher/encipher French sentences with a Javanais encryption.
 ## Contexte du projet
 
 Ce projet est une épreuve dans le cadre d'un entretien de recrutement.
-Le candidata a 7 jours pour livrer une réalisation personnelle répondant au sujet.
+Le candidat a 7 jours pour livrer une réalisation personnelle répondant au sujet.
 
 ## Expression du besoin
 
@@ -39,12 +39,12 @@ Le logiciel permet de chiffrer une phrase française en javanais.
 * Chiffrer : L’action de procéder à un chiffrement.
   * Chiffrement : Le chiffrement est un procédé de cryptographie grâce auquel on souhaite rendre la compréhension d’un document impossible à toute personne qui n’a pas la clé de (dé)chiffrement.
   * Clé de chiffrement :
-  * av est ajouté après chaque consonne (ou groupe de consonnes comme ch, cl, ph, tr,…) d’un mot, autrement dit avant chaque voyelle.
-  * Si le mot commence par une voyelle, av est ajouté devant cette voyelle.
-  * av n'est jamais rajouté après la consonne finale d’un mot.
-  * S'il est suivi d'une voyelle, le « y » est traité comme une consonne. Le mot « moyen » est codé mavoyaven (pas mavoyen). S'il est lui-même prononcé comme « i », il est traité comme une consonne suivie de la voyelle « i ». Le mot « pays » est codé pavayavis (pas pavays).
-  * Les monosyllabes (« a », « à », « en », « un ») ainsi que les mots commençant par une voyelle prennent une syllabe supplémentaire initiale. Ainsi, « abricot » est codé avabravicavot.
-  * Le « e » muet n'impose pas la présence de syllabe supplémentaire : « tarte » est codé tavarte. La syllabe supplémentaire peut être ajoutée comme une forme d'insistance. Ainsi, « espèce de tarte » est codé avespavecAVe dave tavarTAVE. Ici la forme simple sera utilisée.
+  - av est ajouté après chaque consonne (ou groupe de consonnes comme ch, cl, ph, tr,…) d’un mot, autrement dit avant chaque voyelle.
+  - Si le mot commence par une voyelle, av est ajouté devant cette voyelle.
+  - av n'est jamais rajouté après la consonne finale d’un mot.
+  - S'il est suivi d'une voyelle, le « y » est traité comme une consonne. Le mot « moyen » est codé mavoyaven (pas mavoyen). S'il est lui-même prononcé comme « i », il est traité comme une consonne suivie de la voyelle « i ». Le mot « pays » est codé pavayavis (pas pavays).
+  - Les monosyllabes (« a », « à », « en », « un ») ainsi que les mots commençant par une voyelle prennent une syllabe supplémentaire initiale. Ainsi, « abricot » est codé avabravicavot.
+  - Le « e » muet n'impose pas la présence de syllabe supplémentaire : « tarte » est codé tavarte. La syllabe supplémentaire peut être ajoutée comme une forme d'insistance. Ainsi, « espèce de tarte » est codé avespavecAVe dave tavarTAVE. Ici la forme simple sera utilisée.
 * Phrase : Ici "phrase" a plutôt le sens de "message", dont le respect des règles de la grammaire n'a pas d'importance. Les signes de ponctuation sont conservés inchangés. La taille maximale est 100 mots, ou 550 caractères (Whitespace caractères et ponctuation comprise).
 * Français : Les mots contenus dans le message doivent tous être issus de la langue française (se trouver dans un dictionnaire récent).
 * Javanais : Procédé de codage argotique utilisant une phonologie parasitaire constituée par l'insertion d'une syllabe supplémentaire entre voyelles et consonnes.
