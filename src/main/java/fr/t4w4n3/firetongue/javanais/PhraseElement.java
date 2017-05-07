@@ -8,12 +8,11 @@ public abstract class PhraseElement {
 	}
 
 	public void setContenu(String contenu) {
-		this.contenu = contenu;
+		this.contenu = contenu;		
 	}
 
 	public PhraseElement(String contenu) {
 		this.contenu = contenu;
 	}
 
-	
 }
