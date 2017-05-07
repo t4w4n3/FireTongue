@@ -14,11 +14,10 @@ public class Phrase extends Message {
 		return phraseElements;
 	}
 
-	public void setPhraseElement(int index, String value) {
-		this.phraseElements.set(index, new PhraseElement(value) {
-		});
+	public void setPhraseElement(int index, PhraseElement phraseElement) {
+		this.phraseElements.set(index, phraseElement);
 	}
-	
+
 	public PhraseElement getPhraseElement(int index) {
 		return phraseElements.get(index);
 	}
