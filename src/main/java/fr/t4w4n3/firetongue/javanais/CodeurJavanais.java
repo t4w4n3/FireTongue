@@ -1,6 +1,5 @@
 package fr.t4w4n3.firetongue.javanais;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import fr.t4w4n3.transcodeur.Codeur;

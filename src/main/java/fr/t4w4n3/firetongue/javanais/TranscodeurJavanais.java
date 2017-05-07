@@ -1,6 +1,5 @@
 package fr.t4w4n3.firetongue.javanais;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
