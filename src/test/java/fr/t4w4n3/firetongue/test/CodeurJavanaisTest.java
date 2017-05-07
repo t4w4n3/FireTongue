@@ -2,9 +2,6 @@ package fr.t4w4n3.firetongue.test;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Test;
 
 import fr.t4w4n3.firetongue.javanais.CodeurJavanais;
@@ -15,19 +12,19 @@ public class CodeurJavanaisTest {
 	@Test
 	public final void testInsertParasiteAvantVoyelles() {
 		CodeurJavanais codeurJavanais = new CodeurJavanais();
-		List<Mot> mots = new ArrayList<Mot>();
-		mots.add(new Mot("bonjour"));
-		mots.add(new Mot("chante"));
-		mots.add(new Mot("moyen"));
-		mots.add(new Mot("exemple"));
-		mots.add(new Mot("au"));
 		String motJavanais;
-		motJavanais = codeurJavanais.insertParasiteAvantVoyelles(mots.get(0)).getContenu();
+		motJavanais = codeurJavanais.insertParasiteAvantVoyelles(new Mot("bonjour")).getContenu();
 		assertEquals("Insert parasit in \"bonjour\"", motJavanais, "bavonjavour");
+		motJavanais = codeurJavanais.insertParasiteAvantVoyelles(new Mot("chante")).getContenu();
 		assertEquals("Insert parasit in \"chante\"", motJavanais, "chavantave");
+		motJavanais = codeurJavanais.insertParasiteAvantVoyelles(new Mot("moyen")).getContenu();
 		assertEquals("Insert parasit in \"moyen\"", motJavanais, "mavoyen");
-		assertEquals("Insert parasit in \"exemple\"", motJavanais, "chavantave");
-		assertEquals("Insert parasit in \"au\"", motJavanais, "chavantave");
+		motJavanais = codeurJavanais.insertParasiteAvantVoyelles(new Mot("exemple")).getContenu();
+		assertEquals("Insert parasit in \"exemple\"", motJavanais, "avexavemplave");
+		motJavanais = codeurJavanais.insertParasiteAvantVoyelles(new Mot("au")).getContenu();
+		assertEquals("Insert parasit in \"au\"", motJavanais, "avau");
+		motJavanais = codeurJavanais.insertParasiteAvantVoyelles(new Mot("paravent")).getContenu();
+		assertEquals("Insert parasit in \"paravent\"", motJavanais, "pavaravavavent");
 
 	}
 }
