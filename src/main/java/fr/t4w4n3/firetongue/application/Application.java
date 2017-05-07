@@ -9,9 +9,6 @@ public class Application {
 
 	public static void main(String[] args) {
 		TranscodeurJavanais transcodeurJavanais = new TranscodeurJavanais();
-		/*Object object = new Phrase(args[1]);
-		Message message = (Message) object;
-		Phrase phrase = (Phrase) message;*/
 		Phrase phrase = new Phrase(args[1]);
 		if (args[0].equals("c")) {
 			Message result = transcodeurJavanais.getCodeur().process(phrase);
