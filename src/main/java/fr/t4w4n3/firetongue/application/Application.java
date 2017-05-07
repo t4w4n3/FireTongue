@@ -8,8 +8,11 @@ import fr.t4w4n3.transcodeur.Transcodeur;
 public class Application {
 
 	public static void main(String[] args) {
-		Transcodeur transcodeurJavanais = new TranscodeurJavanais();
-		Message phrase = new Phrase(args[1]);
+		TranscodeurJavanais transcodeurJavanais = new TranscodeurJavanais();
+		/*Object object = new Phrase(args[1]);
+		Message message = (Message) object;
+		Phrase phrase = (Phrase) message;*/
+		Phrase phrase = new Phrase(args[1]);
 		if (args[0].equals("c")) {
 			Message result = transcodeurJavanais.getCodeur().process(phrase);
 			System.out.println(result.toString());

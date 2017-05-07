@@ -14,6 +14,11 @@ public class Phrase extends Message {
 		return phraseElements;
 	}
 
+	public void setPhraseElement(int index, String value) {
+		this.phraseElements.set(index, new PhraseElement(value) {
+		});
+	}
+	
 	public PhraseElement getPhraseElement(int index) {
 		return phraseElements.get(index);
 	}
@@ -22,11 +27,10 @@ public class Phrase extends Message {
 		return null;
 	}
 
-	public String toString(){
+	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		for (PhraseElement phraseElement : this.phraseElements)
-		{
-		    sb.append(phraseElement.getContenu());
+		for (PhraseElement phraseElement : this.phraseElements) {
+			sb.append(phraseElement.getContenu());
 		}
 		return sb.toString();
 	}
