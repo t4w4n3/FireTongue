@@ -3,7 +3,6 @@ package fr.t4w4n3.firetongue.application;
 import fr.t4w4n3.firetongue.javanais.Phrase;
 import fr.t4w4n3.firetongue.javanais.TranscodeurJavanais;
 import fr.t4w4n3.transcodeur.Message;
-import fr.t4w4n3.transcodeur.Transcodeur;
 
 public class Application {
 

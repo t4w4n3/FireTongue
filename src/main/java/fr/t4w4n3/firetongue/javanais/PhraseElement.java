@@ -1,10 +1,5 @@
 package fr.t4w4n3.firetongue.javanais;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
 public abstract class PhraseElement {
 	private String contenu;
 

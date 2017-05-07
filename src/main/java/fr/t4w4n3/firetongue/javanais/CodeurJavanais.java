@@ -6,20 +6,28 @@ import fr.t4w4n3.transcodeur.Codeur;
 import fr.t4w4n3.transcodeur.Message;
 
 public class CodeurJavanais extends Codeur {
+	private String parasite;
 
-	protected String one(String in) {
-
+	protected String insertParasiteAvantVoyelles(String in) {
+		// Pattern pattern = Pattern.compile("\\w+");
+		// Matcher matcher;
+		in = in.replaceAll("([aeiouy])", this.parasite + "$1");
 		return in;
 
 	}
+
 	protected String two(String in) {
 
 		return in;
 
 	}
 
+	public CodeurJavanais() {
+		this.parasite = TranscodeurJavanais.getParasite();
+	}
+
 	public String sortSteps(String in) {
-		String one = one(in);
+		String one = insertParasiteAvantVoyelles(in);
 		String two = two(one);
 		return two;
 	}
