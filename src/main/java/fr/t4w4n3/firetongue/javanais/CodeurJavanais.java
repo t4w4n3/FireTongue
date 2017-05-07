@@ -12,7 +12,7 @@ public class CodeurJavanais extends Codeur {
 		String motJavanais;
 		motJavanais = mot.getContenu().replaceAll("(?iu)([^aeiouyéàèùâêîôû])([aeiouyéàèùâêîôû])",
 				"$1" + parasite + "$2");
-		motJavanais = motJavanais.replaceAll("(?iu)^([aeiouyéàèùâêîôû])", "1" + parasite + "$1");
+		motJavanais = motJavanais.replaceAll("(?iu)^([aeiouyéàèùâêîôû])", "$1" + parasite + "$1");
 		mot.setContenu(motJavanais);
 		return mot;
 	}
