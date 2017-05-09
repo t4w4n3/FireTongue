@@ -8,7 +8,7 @@ import fr.t4w4n3.transcodeur.Message;
 public class CodeurJavanais extends Codeur {
 	private String parasite;
 
-	protected Mot insertParasiteAvantVoyelles(Mot mot) {
+	public Mot insertParasiteAvantVoyelles(Mot mot) {
 		String motJavanais;
 		motJavanais = mot.getContenu().replaceAll("(?iu)([^aeiouyéàèùâêîôû])([aeiouyéàèùâêîôû])",
 				"$1" + parasite + "$2");
@@ -17,7 +17,7 @@ public class CodeurJavanais extends Codeur {
 		return mot;
 	}
 
-	protected Mot insertParasiteY(Mot mot) {
+	public Mot insertParasiteY(Mot mot) {
 		return mot;
 	}
 
